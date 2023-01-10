@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RESULT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <style>
+      @charset "utf-8";
+      body {
+      background-color:rgb(235,235,235);
+      }
+      h1 {
+          font-size: 18px;
+          font-family: "Nico Moji";
+          font-weight: bold;
+          margin: 0;
+      }
+      h2 {
+          font-size: 6px;
+          border-color: #2e99a9;
+          font-family: "M PLUS Rounded 1c";
+          font-weight: bold;
+          margin: 5px;
+      }
+      table{
+        border-collapse:separate;
+        border-spacing: 5px;
+        table-layout: fixed;
+        width: 100%;
+      }
+      table th,table td{
+        border-radius: 5px;
+        width: 50;
+        text-align: center;
+        padding: 10px 0;
+      }
+      table th{
+        background-color: #2e99a9;
+        color: white;
+        border:solid 2px #2e99a9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-sm">
+            <h2 style="margin: 20px 30px 0">
+              <span style="color:#2e99a9">花検索アプリ</span><br>
+              <span style="font-size: 18px; font-family: Nico Moji; font-weight: bold;">
+              FlowerSearcher
+              </span>
+            </h2>
+        </div>
+      </header>
+
+      <hr 
+      style="border-top: 3px double #8c8b8b; margin: 30px 0;"
+      >
+
+      <h1 style="color:#2e99a9; font-size: 30px;">RESULT LIST</h1>
+      
+      <div 
+      style="
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        background: whitesmoke;
+        border-top: solid 10px #2e99a9;"
+      >
+        <table>
+          <thead>
+            <tr >
+              <th style="opacity:0"></th>
+              <th 
+              style="border-color:#2e99a9;
+              box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+              ">1st</th>
+              <th
+              style="border-color:#2e99a9;
+              box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+              ">2nd</th>
+              <th
+              style="border-color:#2e99a9;
+              box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+              ">3rd</th>
+              <th
+              style="border-color:#2e99a9;
+              box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+              ">4th</th>
+              <th
+              style="border-color:#2e99a9;
+              box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+              ">5th</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for image in images %}
+            <tr>
+              <th style="background-color: white; width: 100px; height: 100px;">
+                <img style="width: 80px;height: 80px; margin:0 auto; padding:10px" src="{{ image.picture.url }}" height="70" />
+              </th>
+              <td >
+                <h3 style="font-size: 12px; font-family: Nico Moji; font-weight: bold;">
+                  {{ image.first_name }}<br />
+                  {{ image.first_value }}%
+                </h3>
+              </td>
+              <td>
+                <h3 style="font-size: 12px; font-family: Nico Moji; font-weight: bold;">
+                  {{ image.second_name }}<br />
+                  {{ image.second_value }}%
+                </h3>
+              </td>
+              <td>
+                <h3 style="font-size: 12px; font-family: Nico Moji; font-weight: bold;">
+                  {{ image.third_name }}<br />
+                  {{ image.third_value }}%
+                </h3>
+              </td>
+              <td>
+                <h3 style="font-size: 12px; font-family: Nico Moji; font-weight: bold;">
+                  {{ image.fourth_name }}<br />
+                  {{ image.fourth_value }}%
+                </h3>
+              </td>
+              <td>
+                <h3 style="font-size: 12px; font-family: Nico Moji; font-weight: bold;">
+                  {{ image.fifth_name }}<br />
+                  {{ image.fifth_value }}%
+                </h3>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <hr 
+      style="border-top: 3px double #8c8b8b; margin: 30px 0;"
+      >
+
+      <div class="container" style="text-align: center; padding-top: 10px; padding-bottom: 30px;">
+        <a style="color: #2e99a9; font-family: Nico Moji;" href="{% url 'flower:upload' %}">UPLOAD MORE</a>
+      </div> 
+    </div>
+  </body>
+</html>

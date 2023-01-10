@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+      <meta charset="utf-8" />
+      <title>FLOWER SEACHER</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+      <style>
+        @charset "utf-8";
+        body {
+        background-color:rgb(235,235,235);
+        }
+        #d-area{
+            border: 2px solid #2e99a9; 
+            padding: 30px;
+            font-family: "M PLUS Rounded 1c";;
+        }
+        img{
+          width: 400px;
+        }
+        h1 {
+            font-size: 18px;
+            font-family: "Nico Moji";
+            font-weight: bold;
+            margin: 0;
+        }
+        h2 {
+            font-size: 6px;
+            border-color: #2e99a9;
+            font-family: "M PLUS Rounded 1c";
+            font-weight: bold;
+            margin: 5px;
+        }
+        .btn a{
+          background: #eee;
+          font-family: "Nico Moji";
+          position: relative;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 0 auto;
+          max-width: 240px;
+          padding: 12px 50px;
+          color: #313131;
+          transition: 0.3s ease-in-out;
+          font-weight: 500;
+          margin-top: 30px;
+        }
+        .btn a::before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          width: calc(100% - 1px);
+          height: calc(100% - 1px);
+          border: 2px solid #2e99a9;
+          transition: 0.2s;
+        }
+
+        .btn a:hover::before {
+          top: 0;
+          left: 0;
+        }
+
+        .btn a:hover {
+          text-decoration: none;
+          background-color: #2e99a9;
+        }
+        
+        .block{
+          display:block;
+          width:150px;
+          margin:0 auto;
+        }
+        .box {
+          margin:0 auto;
+        }
+        
+      </style>
+    </head>
+
+    <body>
+      <div class="container">
+        <header>
+          <div class="col-sm">
+              <h2 style="margin: 20px 30px 0">
+                <span style="color:#2e99a9">花検索アプリ</span><br>
+                <span style="font-size: 18px; font-family: Nico Moji; font-weight: bold;">
+                FlowerSearcher
+                </span>
+              </h2>
+          </div>
+        </header>
+                                                                                                                                                                                                                                                    
+        <hr 
+        style="border-top: 3px double #8c8b8b; margin: 30px 0;"
+        >
+
+        <div class="container">
+            <div class="container">
+              <p style="opacity:0.7; font-family:Arial;">
+                こんにちは<br>
+                私は花の種類を認識するアプリです<br>
+                認識したい花の画像をアップロードしてみましょう
+              </p>
+            </div>
+          
+          
+          <div class="col-lg-8 offset-lg-2">
+            <div>
+              <h2 style="font-size: 15px; font-family: Nico Moji;">upload</h2>
+            </div>
+
+            <form
+              enctype="multipart/form-data"
+              action="{% url 'flower:upload' %}"
+              method="POST"
+            >
+              <div id="d-area">
+                {% csrf_token %} {{form.as_p}}
+              </div>
+              
+              <div class="block">
+                <button class="btn" id="f-input" type="submit">
+                  <a>PUSH</a>
+                </button>
+              </div>
+                  
+              <hr 
+              style="border-top: 3px double #8c8b8b; margin: 30px 0;"
+              >
+
+              <div class="container" style="text-align: center; padding-top: 10px;">
+                <a style="color: #2e99a9; font-family: Nico Moji;" href="{% url 'flower:showall' %}">RESULT LIST</a>
+              </div> 
+            </form>
+          </div>
+        </div>        
+      </div>
+    </body>
+  
+</html>
