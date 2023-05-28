@@ -1,7 +1,6 @@
 # FlowerSearcher
 
-FlowerSearcher is a flower classification app that can classify 17 different types of flowers. It is built using Django as the backend framework and utilizes the ResNet AI model for flower classification.
-
+FlowerSearcher is a flower classification app that can classify 17 different types of flowers. It is built using Django as the backend framework and utilizes ResNet for flower classification task.
 ## Features
 
 - Classifies 17 different types of flowers.
