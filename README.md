@@ -17,8 +17,9 @@ FlowerSearcher is a flower classification app that can classify 17 different typ
 ## Installation
 
 1. Clone the repository:
-
+```shell
 git clone https://github.com/your-username/FlowerSearcher.git
+
 
 2.　Change into the project directory:
 
@@ -28,4 +29,4 @@ cd FlowerSearcher
 
 python manage.py runserver
 
-Open your web browser and visit http://localhost:8000 to access the FlowerSearcher app.🌺17種類の花の分類を行うことができる花検索アプリFlowerSearcherを作成した。バックエンドにはDjangoにより開発を行なった。また、分類におけるAIモデルとしてResNetを用いている。
+Open your web browser and visit http://localhost:8000 to access the FlowerSearcher app.
