@@ -1,6 +1,9 @@
 # FlowerSearcher
 
 FlowerSearcher is a flower classification app that can classify 17 different types of flowers. It is built using Django as the backend framework and utilizes ResNet for flower classification task.
+
+![Uploading IMG_2555.JPG…]()
+
 ## Features
 
 - Classifies 17 different types of flowers.
@@ -9,9 +12,9 @@ FlowerSearcher is a flower classification app that can classify 17 different typ
 
 ## Requirements
 
-- Python 3.7 or higher
-- Django 3.2 or higher
-- Torch (PyTorch) 1.8 or higher
+- Python 3.7 
+- Django 3.2 
+- PyTorch 1.8 
 
 ## Installation
 
