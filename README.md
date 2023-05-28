@@ -17,7 +17,7 @@ FlowerSearcher is a flower classification app that can classify 17 different typ
 
 1. Clone the repository:
 ```shell
-git clone https://github.com/your-username/FlowerSearcher.git
+git clone https://github.com/reiji061/FlowerSearcher.git
 ```
 
 2.　Change into the project directory:
