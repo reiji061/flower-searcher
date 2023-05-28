@@ -29,4 +29,4 @@ cd FlowerSearcher
 ```shell
 python manage.py runserver
 ```
-Open your web browser and visit http://localhost:8000 to access the FlowerSearcher app.
+
