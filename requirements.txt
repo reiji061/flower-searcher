@@ -8,5 +8,5 @@ pip==9.0.3
 pytz==2020.1
 setuptools==39.0.1
 sqlparse==0.3.1
-torch==1.6.0
-torchvision==0.7.0
+torch==1.8.0
+torchvision==0.10.0
