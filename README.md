@@ -83,3 +83,7 @@ python manage.py runserver
 access to
 http://127.0.0.1:8000/flower/upload
 
+## Note
+security key is not included in the repository.
+## Author
+- [reiji061](github.com/reiji061)
